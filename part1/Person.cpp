@@ -1,4 +1,4 @@
-#include "stdafx.h"
+ï»¿#include "stdafx.h"
 #include "Person.h"
 #include <iostream>
 using namespace std;
@@ -7,6 +7,12 @@ using namespace std;
 Person::Person()
 {
 
+}
+
+Person::Person(const string desname, const string destaddress)
+{
+	name = desname;
+	address = destaddress;
 }
 
 
@@ -31,7 +37,7 @@ istream& read(istream & is, Person & person)
 	cout << "Input name and address:";
 	is >> person.name >> person.address; 
 	return is;
-	// ½ÓÊÜÒ»¸öioÀàĞÍµÄÒıÓÃ×÷ÎªµÚÒ»¸ö²ÎÊı£¬ioÀàÊôÓÚ²»ÄÜ¿½±´µÄÀàĞÍ£¬ËùÒÔÖ»ÄÜÊ¹ÓÃÒıÓÃÀ´´«µİ
+	// æ¥å—ä¸€ä¸ªioç±»å‹çš„å¼•ç”¨ä½œä¸ºç¬¬ä¸€ä¸ªå‚æ•°ï¼Œioç±»å±äºä¸èƒ½æ‹·è´çš„ç±»å‹ï¼Œæ‰€ä»¥åªèƒ½ä½¿ç”¨å¼•ç”¨æ¥ä¼ é€’
 }
 
 ostream& print(ostream & os, const Person & person)
@@ -39,6 +45,6 @@ ostream& print(ostream & os, const Person & person)
 	cout << "Output name and address:";
 	os << person.name << "  " << person.address;
 	return os;
-	// TODO: ÔÚ´Ë´¦²åÈë return Óï¾ä
+	// TODO: åœ¨æ­¤å¤„æ’å…¥ return è¯­å¥
 }
 

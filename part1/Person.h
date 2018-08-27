@@ -1,10 +1,11 @@
-#pragma once
+﻿#pragma once
 #include<string>
 using namespace std;
 class Person
 {
 public:
 	Person();
+	Person(const string desname,const string destaddress);
 	~Person();
 	const std::string getname() { return this->name; }
 	const std::string getadress() { return this->address; }
